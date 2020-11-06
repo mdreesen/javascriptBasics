@@ -58,11 +58,12 @@ console.log(dogYears);
 // student score - 18
 // max score - 20
 // percent variable - 90
+// This should print out a percentage out of 100
 
 let studentScore = 18;
 let max = 20;
 
-let percent = (18 / 20) * 100;
+let percent = (studentScore / max) * 100;
 
 // print percent
 console.log(percent);
