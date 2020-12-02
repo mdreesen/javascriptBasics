@@ -1,3 +1,4 @@
+/*
 const pal = str => {
     str = str.toLowerCase();
 
@@ -14,3 +15,12 @@ const pal2 = str => {
 }
 
 pal2('nope')
+*/
+
+const pal = str => {
+    str = str.toUpperCase();
+
+    console.log(str === str.split('').reverse().join());
+}
+
+pal('teeeeet');
