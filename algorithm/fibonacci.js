@@ -18,4 +18,4 @@ const recursive = num => {
     return recursive(num - 1) + recursive(num - 2);
 }
 
-module.exports = { recursive, linear }
+console.log(recursive(3))
