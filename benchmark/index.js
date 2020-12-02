@@ -1,8 +1,8 @@
 const benchmark = require('benchmark');
-const { linearSearch, binarySearch } = require('./search');
+const { linearSearch, binarySearch, bubbleSort, quickSort } = require('./search');
 
 const numbers = [];
-for (let i = 1; i <= 1000000; i++) {
+for (let i = 1; i <= 5000; i++) {
     // populate the array with the numbers 1 to 1,000,000
     numbers.push(i);
 }
@@ -13,6 +13,16 @@ const target = numbers[0];
 const suite = new benchmark.Suite;
 
 suite
+    .add('bubble sort', function() {
+        const testArray = [...numbers];
+
+        bubbleSort(testArray);
+    })
+    .add('quick sort', function() {
+        const testArray = [...numbers];
+
+        quickSort(testArray);
+    })
     .add('linear search', function() {
         linearSearch(numbers, target);
     })
